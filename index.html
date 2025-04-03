@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Library：官方中文入口及最新镜像网址 | 国内可访问地址</title>
+ <meta name="keywords" content="zlibrary，zlibrary，zlibrary入口，zlibrary中文官网，zlibrary镜像网址，zlibrary数字图书馆" />
+<meta name="description" content="ZLibrary（简称"Z-Lib"）是全球知名的非营利性在线图书馆，自2009年成立以来，通过志愿者和用户捐赠持续运营，致力于打破知识获取的经济壁垒。平台收录超过2300万本电子书及8400万篇学术文章，涵盖小说、学术著作、技术手册、期刊论文等多种类型，支持包括PDF、EPUB、MOBI等主流格式。">
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <!-- 引入 Font Awesome 图标库 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- 引入 Inter 字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        /* 自定义滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 功能卡片样式 */
+        .feature-card {
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .dark .feature-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 按钮悬停样式 */
+        .btn-hover {
+            transition: all 0.2s;
+        }
+
+        .btn-hover:hover {
+            transform: scale(1.05);
+        }
+
+        /* 淡入动画样式 */
+        .section-fade {
+            opacity: 0;
+            transition: opacity 0.6s, transform 0.6s;
+            transform: translateY(20px);
+        }
+
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- 头部导航栏 -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-book-open text-primary-600 dark:text-primary-400 text-2xl"></i>
+                <h1 class="text-xl font-bold">Z-Library数字图书馆</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    id="theme-toggle">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                <a class="hidden md:block px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-md transition-colors btn-hover"
+                    href="#features">功能特点</a>
+                <a class="hidden md:block px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-md transition-colors btn-hover"
+                    href="#steps">使用步骤</a>
+            </div>
+        </div>
+    </header>
+    <!-- 主内容区域 -->
+    <main class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- 英雄区域 -->
+        <section class="mb-16 section-fade">
+            <div class="bg-gradient-to-r from-primary-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white shadow-lg">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">ZLibrary：全球读者的免费数字图书馆</h1>
+                <p class="text-lg md:text-xl opacity-90 max-w-3xl">探索全球最大的免费在线图书馆，拥有超过2300万本电子书和8400万篇学术文章，打破知识获取的经济壁垒。</p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a class="bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors btn-hover"
+                        href="https://www.imi123.cn/sites/503.html">官网入口</a>
+                    <a class="bg-transparent border border-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors btn-hover"
+                        href="https://pan.quark.cn/s/45d1c03ef62b">客户端下载</a>
+                </div>
+            </div>
+        </section>
+        <!-- 简介区域 -->
+        <section class="mb-16 section-fade" id="intro">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-info-circle text-primary-500 mr-3"></i> Z-Library简介
+                </h2>
+                <p class="text-lg mb-6 leading-relaxed">ZLibrary（简称"Z-Lib"）是全球知名的非营利性在线图书馆，自2009年成立以来，通过志愿者和用户捐赠持续运营，致力于打破知识获取的经济壁垒。平台收录超过2300万本电子书及8400万篇学术文章，涵盖小说、学术著作、技术手册、期刊论文等多种类型，支持包括PDF、EPUB、MOBI等主流格式。</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <div class="text-primary-500 text-4xl mb-4">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">全球资源</h3>
+                        <p>覆盖200余种语言，适合语言学习者及跨国研究者</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <div class="text-primary-500 text-4xl mb-4">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">多格式支持</h3>
+                        <p>支持PDF、EPUB、MOBI等多种主流电子书格式</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <div class="text-primary-500 text-4xl mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">社区协作</h3>
+                        <p>用户可上传原创内容、参与书评编辑，形成知识共享生态</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 功能特点区域 -->
+        <section class="mb-16 section-fade" id="features">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 flex items-center">
+                    <i class="fas fa-star text-primary-500 mr-3"></i> 核心功能特点
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="feature-card bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-search text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">海量资源与多维度检索</h3>
+                        </div>
+                        <p class="mb-4">ZLibrary的搜索引擎支持标题、作者、ISBN、出版社等常规字段，并独创"全文检索"功能，允许用户输入特定短语定位书籍内页。</p>
+                        <p>搜索栏还提供年份范围（如限定2000 - 2020年出版）、语言筛选（如仅显示中文资源）及格式过滤（如仅下载有声书）等高级选项。</p>
+                    </div>
+                    <div class="feature-card bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-mobile-alt text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">个性化阅读与设备兼容性</h3>
+                        </div>
+                        <p class="mb-4">平台支持夜间模式、字体调整及笔记标注功能，适配手机、平板、电子阅读器等多终端。</p>
+                        <p>基于阅读历史的智能推荐系统会推送相关书籍，例如频繁下载科幻小说的用户会收到《三体》续作或同类作家的新书提示。</p>
+                    </div>
+                    <div class="feature-card bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-share-alt text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">社交化学习与资源贡献</h3>
+                        </div>
+                        <p class="mb-4">用户可创建公开书单（如"人工智能入门必读10本书"），供他人参考。学术研究者还能上传未发表的论文手稿，通过社区反馈完善内容。</p>
+                        <p>平台甚至提供"书籍互助"功能，用户可请求稀缺资源（如绝版学术期刊），由其他成员协助扫描上传。</p>
+                    </div>
+                    <div class="feature-card bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-full mr-4">
+                                <i class="fas fa-user-cog text-primary-600 dark:text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">用户权限与高级功能</h3>
+                        </div>
+                        <p class="mb-4">平台无需强制注册即可使用，但注册后可解锁高级功能：每日下载量从5本提升至10本，下载速度从1MB/s增至5MB/s。</p>
+                        <p>注册用户还可享受云端存储（如Google Drive）和个性化书单管理等便利功能。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 使用步骤区域 -->
+        <section class="mb-16 section-fade" id="steps">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 flex items-center">
+                    <i class="fas fa-list-ol text-primary-500 mr-3"></i> 使用步骤详解
+                </h2>
+                <div class="space-y-12">
+                    <div class="relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-primary-200 dark:before:bg-primary-900">
+                        <div class="absolute -left-8 top-0 bg-primary-500 text-white rounded-full w-8 h-8 flex items-center justify-center">1</div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold mb-4">访问与注册</h3>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                                <p class="mb-4">因域名变动频繁，建议通过官方推荐的镜像站（如imi123.com、z-library.zlibry.online）或Telegram频道"Z-Access"获取最新链接。</p>
+                                <p>点击首页右上角"登录"，选择邮箱或社交媒体账号（如Google）快速注册。注册后每日下载限额提升，并可同步阅读进度至云端。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-primary-200 dark:before:bg-primary-900">
+                        <div class="absolute -left-8 top-0 bg-primary-500 text-white rounded-full w-8 h-8 flex items-center justify-center">2</div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold mb-4">高效搜索与下载</h3>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                                <p class="mb-4">若需查找《资本论》德文原版，可在搜索栏选择"德语"标签，并输入"Karl Marx Das Kapital"。</p>
+                                <p>在书籍详情页点击"批量下载"，系统自动打包同一作者或主题的10本书籍，支持断点续传避免网络中断。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-primary-200 dark:before:bg-primary-900">
+                        <div class="absolute -left-8 top-0 bg-primary-500 text-white rounded-full w-8 h-8 flex items-center justify-center">3</div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold mb-4">资源管理与拓展</h3>
+                            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                                <p class="mb-4">使用标签功能（如"待读""研究参考"）管理书籍，或导出书单至Excel进行统计分析。</p>
+                                <p>通过"捐赠"页面升级至Premium账户，可无限下载并优先获取新书资源。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 争议与注意事项区域 -->
+        <section class="mb-16 section-fade">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 flex items-center">
+                    <i class="fas fa-exclamation-triangle text-primary-500 mr-3"></i> 争议与注意事项
+                </h2>
+                <div class="bg-yellow-50 dark:bg-yellow-900/30 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                    <p class="mb-4">尽管ZLibrary以"知识民主化"为宗旨，但其资源版权状态存在争议。部分书籍可能涉及侵权风险，建议用户优先下载标注为"公共领域"或"创作者授权"的内容。</p>
+                    <p>平台依赖用户捐赠维持运营，若需稳定服务可定期小额资助以支持服务器成本。</p>
+                </div>
+            </div>
+        </section>
+        <!-- 价值区域 -->
+        <section class="mb-16 section-fade">
+            <div class="bg-gradient-to-r from-primary-600 to-blue-600 rounded-2xl p-8 text-white shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">ZLibrary的价值</h2>
+                <p class="text-lg mb-6">ZLibrary通过技术创新与社区协作，重塑了数字时代的阅读生态，成为学生、学者及普通读者的重要知识工具。其开放性与功能性并重的设计，持续推动全球知识的无障碍流通。</p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a class="bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors btn-hover"
+                        href="https://pan.quark.cn/s/45d1c03ef62b">客户端下载</a>
+                    <a class="bg-transparent border border-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors btn-hover"
+                        href="https://www.imi123.cn/sites/503.html">访问ZLibrary</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 页脚区域 -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-book-open text-primary-600 dark:text-primary-400 text-2xl"></i>
+                        <h2 class="text-xl font-bold">Z-Library</h2>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">Z-libray数字图书馆</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-600 dark:text-gray-400">爱米导航网</p>
+                    <p class="text-gray-500 dark:text-gray-500 text-sm mt-2">Copyright ©2025 Zlibrary数字图书馆</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 脚本区域 -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>    
